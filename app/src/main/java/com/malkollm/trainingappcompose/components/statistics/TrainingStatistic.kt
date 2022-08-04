@@ -1,13 +1,11 @@
 package com.malkollm.trainingappcompose.components.statistics
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -18,9 +16,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun TrainingStatistic() {
+fun TrainingStatistic(trainingStatistics: List<Int>) {
     val textSizeContent: TextUnit = 16.sp
     val cardHeight: Dp = 120.dp
+    val trainingCount = trainingStatistics.size
 
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -47,7 +46,7 @@ fun TrainingStatistic() {
                 )
                 Spacer(modifier = Modifier.height(15.dp))
                 Text(
-                    "336",
+                    "$trainingCount",
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth(),
                     style = TextStyle(
@@ -126,5 +125,5 @@ fun TrainingStatistic() {
 @Preview(showBackground = true)
 @Composable
 fun TrainingStatisticPrev() {
-    TrainingStatistic()
+//    TrainingStatistic(trainingCounts.size)
 }

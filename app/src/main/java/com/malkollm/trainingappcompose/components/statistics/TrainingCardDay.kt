@@ -1,5 +1,6 @@
 package com.malkollm.trainingappcompose.components.statistics
 
+import android.content.Intent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,18 +14,19 @@ import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.rounded.ArrowForward
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.malkollm.trainingappcompose.DetailTrainingInfo
 
 @Composable
-fun TrainingCardDay() {
+fun TrainingCardDay(trainingCounts: List<Int>) {
     val roundedShape: Dp = 10.dp
-    val trainingCounts = listOf(50, 57, 60, 75, 80)
-
+    val mContext = LocalContext.current
 
     Column(
         modifier = Modifier
@@ -75,7 +77,9 @@ fun TrainingCardDay() {
                         )
                     )
                     IconButton(
-                        onClick = { /*TODO*/ },
+                        onClick = {
+                            mContext.startActivity(Intent(mContext, DetailTrainingInfo::class.java))
+                        },
                         modifier = Modifier.weight(0.5f)
                     ) {
                         Icon(

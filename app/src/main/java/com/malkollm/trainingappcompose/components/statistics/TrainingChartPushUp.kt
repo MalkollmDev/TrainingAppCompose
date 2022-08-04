@@ -12,12 +12,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.malkollm.trainingappcompose.MainState
 import com.malkollm.trainingappcompose.components.charts.LineChart
 import com.malkollm.trainingappcompose.ui.theme.TrainingAppComposeTheme
 
 @Composable
-fun TrainingChartPushUp() {
+fun TrainingChartPushUp(trainingCounts: List<Int>) {
     Card(
         shape = RoundedCornerShape(10.dp),
         elevation = 10.dp,
@@ -33,10 +32,9 @@ fun TrainingChartPushUp() {
                 style = TextStyle(
                     fontSize = 24.sp
                 )
-
             )
             Spacer(modifier = Modifier.height(20.dp))
-            LineChart(strokeColor = Color(0xFF7e2828))
+            LineChart(trainingCounts, strokeColor = Color(0xFF7e2828))
         }
     }
 }
@@ -45,6 +43,6 @@ fun TrainingChartPushUp() {
 @Composable
 fun TrainingChartPushUpPrev() {
     TrainingAppComposeTheme {
-        TrainingChartPushUp()
+//        TrainingChartPushUp(trainingCounts)
     }
 }

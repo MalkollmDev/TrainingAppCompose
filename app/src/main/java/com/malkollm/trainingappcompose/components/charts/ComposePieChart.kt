@@ -44,7 +44,7 @@ fun ComposePieChart() {
                 .fillMaxWidth()
                 .padding(start = 16.dp, end = 16.dp),
         ) {
-            LineChart(strokeColor = Color(0xFF7e2828))
+//            LineChart(trainingCounts = trainingCounts, strokeColor = Color(0xFF7e2828))
         }
     }
 }

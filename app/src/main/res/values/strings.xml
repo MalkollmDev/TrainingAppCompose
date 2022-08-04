@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TrainingAppCompose</string>
+    <string name="title_activity_detail_training_info">DetailTrainingInfo</string>
 </resources>

@@ -25,11 +25,13 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainState() {
+fun MainContent() {
+    val trainingCounts = listOf(50, 57, 60, 75, 80)
+
     Column(modifier = Modifier.fillMaxSize()) {
-        TrainingChartPushUp()
-        TrainingStatistic()
-        TrainingCardDay()
+        TrainingChartPushUp(trainingCounts)
+        TrainingStatistic(trainingCounts)
+        TrainingCardDay(trainingCounts)
     }
 }
 
@@ -45,7 +47,7 @@ fun BarChartScreen() {
             }
         }, title = { Text(text = "Прогресс тренировок") })
     }) {
-        MainState()
+        MainContent()
     }
 }
 
@@ -53,6 +55,6 @@ fun BarChartScreen() {
 @Composable
 fun DefaultPreview() {
     TrainingAppComposeTheme {
-        MainState()
+        MainContent()
     }
 }

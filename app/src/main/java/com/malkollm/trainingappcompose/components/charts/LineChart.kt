@@ -1,10 +1,8 @@
 package com.malkollm.trainingappcompose.components.charts
 
-import android.graphics.Paint
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -13,18 +11,21 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import kotlin.math.roundToInt
 
-/**
- * Created by Ankit Dubey on 13,September,2021
- */
 
 @Composable
 fun LineChart(
-    strokeColor : Color = Color.Blue
+    trainingCounts: List<Int>,
+    strokeColor: Color = Color.Blue
 ) {
+    val points: MutableList<Float> = mutableListOf()
 
-    val points = listOf(0.9f, 0.5f, 1f, 0.2f, 0.7f, 0.9f, 0.5f, 1f, 0.2f, 0.7f)
+    for (count in trainingCounts) {
+        var temp = 0f
+        temp = count * 0.01f
+        points.add(temp)
+    }
+//    val points = listOf(0.9f, 0.5f, 1f, 0.2f, 0.7f, 0.9f, 0.5f, 1f, 0.2f, 0.7f)
     val strokeSize = 5f
     Canvas(
         modifier = Modifier
@@ -83,7 +84,7 @@ fun LineChartPreview() {
             .background(Color.LightGray)
             .padding(16.dp)
     ) {
-        LineChart(strokeColor = Color(0xffA34054))
+//        LineChart(trainingCounts = trainingCounts, strokeColor = Color(0xffA34054))
     }
 
 }
