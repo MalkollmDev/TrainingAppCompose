@@ -5,11 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.malkollm.trainingappcompose.components.statistics.TrainingCardDay
 import com.malkollm.trainingappcompose.components.statistics.TrainingChartPushUp
 import com.malkollm.trainingappcompose.components.statistics.TrainingStatistic
@@ -25,7 +27,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainContent() {
+fun App() {
     val trainingCounts = listOf(50, 57, 60, 75, 80)
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -37,17 +39,34 @@ fun MainContent() {
 
 @Composable
 fun BarChartScreen() {
-    Scaffold(topBar = {
-        TopAppBar(navigationIcon = {
-            IconButton(onClick = { /* TODO */ }) {
-                Icon(
-                    imageVector = Icons.Default.Person,
-                    contentDescription = "App"
-                )
+    val navController = rememberNavController()
+    val bottomItems = listOf("list", "search", "push")
+
+    Scaffold(
+        bottomBar =
+        {
+            BottomNavigation {
+                bottomItems.forEach { screen ->
+                    BottomNavigationItem(
+                        selected = false,
+                        onClick = { navController.navigate(screen) },
+                        label = { Text(screen) },
+                        icon = {})
+                }
             }
-        }, title = { Text(text = "Прогресс тренировок") })
-    }) {
-        MainContent()
+        }
+    ) {
+        NavHost(navController = navController, startDestination = "list") {
+            composable("list") { ListScreen(navController) }
+            composable("search") { SearchScreen() }
+            composable("push") { PushScreen() }
+            composable("Details") {
+                navController.previousBackStackEntry?.arguments?.getParcelable<Word>("WORD_KEY")
+                    ?.let {
+                        DetailsScreen(it)
+                    }
+            }
+        }
     }
 }
 
@@ -55,6 +74,6 @@ fun BarChartScreen() {
 @Composable
 fun DefaultPreview() {
     TrainingAppComposeTheme {
-        MainContent()
+        App()
     }
 }
