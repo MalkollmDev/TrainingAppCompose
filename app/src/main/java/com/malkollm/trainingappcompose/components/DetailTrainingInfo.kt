@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose
+package com.malkollm.trainingappcompose.components
 
 import android.content.Intent
 import android.graphics.Paint
