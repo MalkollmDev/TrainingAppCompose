@@ -48,7 +48,7 @@ fun TrainingCardDay() {
     LazyColumn(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 20.dp)
+            .padding(top = 12.dp)
     ) {
         workoutDay.map {
             item {

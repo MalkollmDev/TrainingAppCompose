@@ -4,11 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.malkollm.trainingappcompose.ListScreen
-import com.malkollm.trainingappcompose.PushScreen
-import com.malkollm.trainingappcompose.SearchScreen
+import com.malkollm.trainingappcompose.components.CurrentTrainingScreen
+import com.malkollm.trainingappcompose.components.WorkoutScreen
 import com.malkollm.trainingappcompose.components.HomeScreen
-import com.malkollm.trainingappcompose.components.statistics.TrainingStatistic
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
@@ -17,10 +15,10 @@ fun NavigationGraph(navController: NavHostController) {
             HomeScreen()
         }
         composable(BottomNavItem.Workout.screen_route) {
-            PushScreen()
+            WorkoutScreen()
         }
         composable(BottomNavItem.Statistic.screen_route) {
-            SearchScreen()
+            CurrentTrainingScreen()
         }
     }
 }
