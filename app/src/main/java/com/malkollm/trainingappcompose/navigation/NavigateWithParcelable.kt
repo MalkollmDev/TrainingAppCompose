@@ -1,10 +1,8 @@
-package com.malkollm.trainingappcompose
+package com.malkollm.trainingappcompose.navigation
 
 import android.os.Bundle
-import android.os.Parcel
 import android.os.Parcelable
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
 import androidx.navigation.NavOptionsBuilder
 //import androidx.navigation.compose.navigate
 

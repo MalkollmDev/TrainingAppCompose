@@ -54,7 +54,7 @@ fun CurrentTrainingScreen(
                     totalTime = 100L * 500L,
                     handleColor = Color.Green,
                     inactiveBarColor = Color.DarkGray,
-                    activeBarColor = Color(0xFF37B900),
+                    activeBarColor = Color(0xFF1776d1),
                     modifier = Modifier.size(350.dp)
                 )
             }

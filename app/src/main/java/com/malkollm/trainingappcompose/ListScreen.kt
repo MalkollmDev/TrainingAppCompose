@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController
+import com.malkollm.trainingappcompose.navigation.navigate
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

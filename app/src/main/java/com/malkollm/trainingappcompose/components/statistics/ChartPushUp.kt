@@ -16,7 +16,7 @@ import com.malkollm.trainingappcompose.components.charts.LineChart
 import com.malkollm.trainingappcompose.ui.theme.TrainingAppComposeTheme
 
 @Composable
-fun TrainingChartPushUp(trainingCounts: List<Int>) {
+fun ChartPushUp(trainingCounts: List<Int>) {
     Card(
         shape = RoundedCornerShape(10.dp),
         elevation = 10.dp,

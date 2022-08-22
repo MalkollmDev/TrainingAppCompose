@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun TrainingStatistic(trainingStatistics: List<Int>) {
+fun GeneralStatistics(trainingStatistics: List<Int>) {
     val textSizeContent: TextUnit = 16.sp
     val cardHeight: Dp = 120.dp
     val trainingCount = trainingStatistics.size

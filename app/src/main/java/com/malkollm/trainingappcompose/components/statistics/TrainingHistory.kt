@@ -1,20 +1,15 @@
 package com.malkollm.trainingappcompose.components.statistics
 
-import android.content.Intent
 import android.os.Parcelable
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.rounded.ArrowForward
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -30,7 +25,7 @@ import kotlinx.android.parcel.Parcelize
 data class WorkoutDay(val value: Int) : Parcelable
 
 @Composable
-fun TrainingCardDay() {
+fun TrainingHistory() {
     val roundedShape: Dp = 10.dp
     val workoutDay = listOf(
         WorkoutDay(50),
@@ -114,5 +109,5 @@ fun TrainingCardDay() {
 @Preview
 @Composable
 fun TrainingCardDayPrev() {
-    TrainingCardDay()
+    TrainingHistory()
 }
