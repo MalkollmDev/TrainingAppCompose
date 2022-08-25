@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components.statistics
+package com.malkollm.trainingappcompose.training_app.presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -15,6 +15,9 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+/**
+ * Блок с общей статистикой тренировок за месяц
+ */
 @Composable
 fun GeneralStatistics(trainingStatistics: List<Int>) {
     val textSizeContent: TextUnit = 16.sp

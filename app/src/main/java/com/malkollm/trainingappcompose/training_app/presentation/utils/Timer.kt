@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components.timer_details
+package com.malkollm.trainingappcompose.training_app.presentation.utils
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box

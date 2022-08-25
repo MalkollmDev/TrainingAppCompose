@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.training_details
+package com.malkollm.trainingappcompose.training_app.presentation.training_details
 
 import android.graphics.Paint
 import androidx.compose.foundation.Canvas
@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -35,4 +36,10 @@ fun NumberPushUp () {
             paint,
         )
     }
+}
+
+@Preview
+@Composable
+fun NumberPushUpPrev(){
+    NumberPushUp()
 }

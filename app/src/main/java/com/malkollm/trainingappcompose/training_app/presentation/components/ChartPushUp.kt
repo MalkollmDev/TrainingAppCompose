@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components.statistics
+package com.malkollm.trainingappcompose.training_app.presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,9 +12,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.malkollm.trainingappcompose.components.charts.LineChart
+import com.malkollm.trainingappcompose.training_app.presentation.charts.LineChart
 import com.malkollm.trainingappcompose.ui.theme.TrainingAppComposeTheme
 
+/**
+ * Блок с графиком прогресса отжимания
+ */
 @Composable
 fun ChartPushUp(trainingCounts: List<Int>) {
     Card(

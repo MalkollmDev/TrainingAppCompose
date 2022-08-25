@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.navigation
+package com.malkollm.trainingappcompose.training_app.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color

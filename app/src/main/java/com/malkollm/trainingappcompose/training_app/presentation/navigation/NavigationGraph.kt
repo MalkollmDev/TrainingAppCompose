@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.navigation
+package com.malkollm.trainingappcompose.training_app.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
@@ -6,7 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.malkollm.trainingappcompose.components.CurrentTrainingScreen
 import com.malkollm.trainingappcompose.components.WorkoutScreen
-import com.malkollm.trainingappcompose.components.HomeScreen
+import com.malkollm.trainingappcompose.training_app.presentation.HomeScreen
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {

@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components
+package com.malkollm.trainingappcompose.training_app.presentation
 
 import android.graphics.Paint
 import android.os.Bundle
@@ -14,18 +14,16 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.malkollm.trainingappcompose.components.statistics.HeadCard
+import com.malkollm.trainingappcompose.training_app.presentation.components.HeadCard
 import com.malkollm.trainingappcompose.ui.theme.TrainingAppComposeTheme
 
 class DetailTrainingInfo : ComponentActivity() {
@@ -42,7 +40,7 @@ class DetailTrainingInfo : ComponentActivity() {
 @Composable
 fun DetailInfo() {
     val approachesCount = listOf(5, 7, 15, 25, 10, 100)
-    val paint = Paint().apply {
+    Paint().apply {
         textAlign = Paint.Align.CENTER
         textSize = 50f
         color = Color.White.toArgb()
@@ -129,27 +127,6 @@ fun DetailInfo() {
                 }
             }
         }
-    }
-}
-
-@Composable
-fun facebookIcon() {
-    val assetManager = LocalContext.current.assets
-    val paint = Paint().apply {
-        textAlign = Paint.Align.CENTER
-        textSize = 200f
-        color = Color.White.toArgb()
-    }
-    Canvas(
-        modifier = Modifier
-            .size(100.dp)
-            .padding(16.dp)
-    ) {
-        drawRoundRect(
-            color = Color(0xFF1776d1),
-            cornerRadius = CornerRadius(20f, 20f)
-        )
-        drawContext.canvas.nativeCanvas.drawText("f", center.x + 25, center.y + 90, paint)
     }
 }
 

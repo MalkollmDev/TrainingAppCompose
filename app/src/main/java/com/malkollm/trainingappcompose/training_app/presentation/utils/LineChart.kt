@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components.charts
+package com.malkollm.trainingappcompose.training_app.presentation.charts
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background

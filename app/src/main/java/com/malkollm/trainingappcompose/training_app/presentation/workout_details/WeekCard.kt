@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components.workout_details
+package com.malkollm.trainingappcompose.training_app.presentation.workout_details
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape

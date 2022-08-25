@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components.statistics
+package com.malkollm.trainingappcompose.training_app.presentation.components
 
 import android.os.Parcelable
 import androidx.compose.foundation.layout.*
@@ -19,8 +19,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.android.parcel.Parcelize
 
-//import com.malkollm.trainingappcompose.DetailTrainingInfo
-
+/**
+ * История тренировок за месяц
+ */
 @Parcelize
 data class WorkoutDay(val value: Int) : Parcelable
 

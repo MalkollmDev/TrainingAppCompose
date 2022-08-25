@@ -1,19 +1,14 @@
 package com.malkollm.trainingappcompose.components
 
-import android.graphics.Paint
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.nativeCanvas
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -21,8 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.malkollm.trainingappcompose.R
-import com.malkollm.trainingappcompose.components.timer_details.Timer
-import com.malkollm.trainingappcompose.training_details.NumberPushUp
+import com.malkollm.trainingappcompose.training_app.presentation.utils.Timer
+import com.malkollm.trainingappcompose.training_app.presentation.training_details.NumberPushUp
 
 @Composable
 fun CurrentTrainingScreen(

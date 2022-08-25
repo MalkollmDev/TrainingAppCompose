@@ -1,4 +1,4 @@
-package com.malkollm.trainingappcompose.components.statistics
+package com.malkollm.trainingappcompose.training_app.presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -15,6 +15,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+/**
+ * Дневная статистика по тренировкам
+ */
 @Composable
 fun HeadCard() {
     val fontSizeCard = 20.sp

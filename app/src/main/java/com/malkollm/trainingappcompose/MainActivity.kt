@@ -7,9 +7,9 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.malkollm.trainingappcompose.navigation.NavigationGraph
+import com.malkollm.trainingappcompose.training_app.presentation.navigation.NavigationGraph
 import com.malkollm.trainingappcompose.ui.theme.TrainingAppComposeTheme
-import com.malkollm.trainingappcompose.navigation.*
+import com.malkollm.trainingappcompose.training_app.presentation.navigation.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
